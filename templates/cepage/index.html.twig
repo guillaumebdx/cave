@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CepageController!{% endblock %}
+
+{% block body %}
+    <div class="cepage-create">
+        <h1>Hello CepageController!</h1>
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn btn-primary">OK</button>
+        {{ form_end(form) }}
+        <ul>
+        {% for cepage in cepages %}
+            <li>
+                {{ cepage.variety }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
