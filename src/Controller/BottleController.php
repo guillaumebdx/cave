@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Cepage;
 use App\Entity\Region;
 use App\Entity\Wine;
+use App\Repository\BottleRepository;
 use App\Repository\WineRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,8 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BottleController extends AbstractController
 {
-
-
 
     /**
      * @Route("/bottle/{region}/cepage/{cepage}", name="bottle")
