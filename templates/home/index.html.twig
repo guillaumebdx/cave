@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for bottle in bottles %}
+            <div class="swiper-slide">
+                <div class=" d-flex">
+                    <img src={{ bottle.wine.image}} alt={{ bottle.wine.name }}>
+                    <div class="d-flex flex-column">
+                        <p>{{ bottle.wine.name }}</p>
+                        <p>{{ bottle.year }}</p>
+                        <p>{{ bottle.wine.color }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+
+
+
+    </div>
+{% endblock %}
+
+

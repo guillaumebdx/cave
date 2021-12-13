@@ -20,6 +20,6 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "swiper": "^7.3.1"
+        "swiper": "^7.3.2"
     }
 }
