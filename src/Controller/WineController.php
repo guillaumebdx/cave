@@ -21,6 +21,7 @@ class WineController extends AbstractController
      */
     public function create(EntityManagerInterface $entityManager, Request $request)
     {
+        dump($this->getUser());
         $wine = new Wine();
         $form = $this->createForm(WineType::class, $wine);
         $form->handleRequest($request);
